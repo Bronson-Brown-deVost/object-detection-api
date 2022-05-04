@@ -11,7 +11,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 IMAGE_DIR = './images/test/'
-IMAGE_PATHS = glob.glob(os.path.join(IMAGE_DIR, '*.jpg'))
+IMAGE_PATHS = list(glob.glob(os.path.join(IMAGE_DIR, '*.jpg'))) + list(glob.glob(os.path.join(IMAGE_DIR, '*.png')))
 SAVE_DIR = './images/test_annotated/'
 
 # Load model
